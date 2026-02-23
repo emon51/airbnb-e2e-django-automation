@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand
 from playwright.sync_api import sync_playwright
-from tracker.steps import step01
+from tracker.steps import step01, step02
 
 
 class Command(BaseCommand):
@@ -13,7 +13,8 @@ class Command(BaseCommand):
             page = context.new_page()
 
             try:
-                step01.run(page)
+                country = step01.run(page)
+                step02.run(page, country)
             finally:
                 browser.close()
 
