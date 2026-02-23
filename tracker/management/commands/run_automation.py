@@ -1,0 +1,20 @@
+from django.core.management.base import BaseCommand
+from playwright.sync_api import sync_playwright
+from tracker.steps import step01
+
+
+class Command(BaseCommand):
+    help = 'Run Airbnb end-to-end automation'
+
+    def handle(self, *args, **kwargs):
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=False)
+            context = browser.new_context()
+            page = context.new_page()
+
+            try:
+                step01.run(page)
+            finally:
+                browser.close()
+
+        self.stdout.write(self.style.SUCCESS('Automation complete'))
