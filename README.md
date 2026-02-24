@@ -72,6 +72,11 @@ DEBUG=True
 AIRBNB_URL=https://www.airbnb.com/
 DJANGO_ALLOW_ASYNC_UNSAFE=true
 ```
+### 9. Run automatoion server
+```bash
+python manage.py run_automation.py
+```
+
 ### 9. Run the server
 ```bash
 python manage.py runserver
