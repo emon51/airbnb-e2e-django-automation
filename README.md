@@ -74,7 +74,7 @@ DJANGO_ALLOW_ASYNC_UNSAFE=true
 ```
 ### 9. Run automatoion server
 ```bash
-python manage.py run_automation.py
+python manage.py run_automation
 ```
 
 ### 9. Run the server
