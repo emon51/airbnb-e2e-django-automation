@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from playwright.sync_api import sync_playwright
 from tracker.steps import step01, step02, step03, step04, step05, step06
+from tracker.monitor import attach_console_listener, attach_network_listener
 
 
 class Command(BaseCommand):
@@ -12,9 +13,11 @@ class Command(BaseCommand):
             context = browser.new_context()
             page = context.new_page()
 
+            attach_console_listener(page)
+            attach_network_listener(page)
+
             try:
-                country = step01.run(page)
-                step02.run(page, country)
+                step01.run(page)
                 step03.run(page)
                 step04.run(page)
                 step05.run(page)

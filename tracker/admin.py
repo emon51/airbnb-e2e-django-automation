@@ -1,8 +1,11 @@
 from django.contrib import admin
-from .models import TestResult, SuggestionItem, ListingItem, ConsoleLog, NetworkLog
+from tracker.models import Result
 
-admin.site.register(TestResult)
-admin.site.register(SuggestionItem)
-admin.site.register(ListingItem)
-admin.site.register(ConsoleLog)
-admin.site.register(NetworkLog)
+
+@admin.register(Result)
+class ResultAdmin(admin.ModelAdmin):
+    list_display = ('test_case', 'passed', 'url', 'screenshot', 'created_at')
+    list_filter = ('passed', 'test_case')
+    search_fields = ('test_case', 'comment', 'url')
+    readonly_fields = ('created_at',)
+    ordering = ('-created_at',)

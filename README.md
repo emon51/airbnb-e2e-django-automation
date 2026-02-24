@@ -3,12 +3,12 @@ A Django-based end-to-end web automation project that uses Playwright to interac
 
 # Project Structure
 ```bash
-airbnb_automation/
+airbnb_automation/                 # Project folder
 ├── manage.py
 ├── airbnb_automation/
 │   ├── settings.py
 │   └── urls.py
-├── tracker/
+├── tracker/                       # App folder
 │   ├── models.py                  # Single Result model
 │   ├── services.py                # save_result, take_screenshot, set_state, get_state
 │   ├── admin.py
@@ -34,7 +34,7 @@ airbnb_automation/
 # Installation
 ### 1. Clone the project
 ```bash
-git clone <repo-url>
+git clone https://github.com/emon51/airbnb-e2e-django-automation.git
 ```
 ### 2. Change directory
 ```bash
@@ -52,7 +52,7 @@ source venv/bin/activate
 
 ### 5. Install dependencies
 ```bash
-pip freeze > requirements/txt
+pip install -r requirements.txt
 ```
 
 ### 6. Apply migrations
@@ -65,3 +65,6 @@ python manage.py migrate
 ```bash
 python manage.py createsuperuser
 ```
+
+# License
+This project is created for educational purposes
