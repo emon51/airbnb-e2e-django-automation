@@ -66,5 +66,15 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
+### 8. Run the server
+```bash
+python manage.py runserver
+```
+
+### 9. Visit the admin page
+```bash
+http://127.0.0.1:8000/admin
+```
+
 # License
 This project is created for educational purposes
