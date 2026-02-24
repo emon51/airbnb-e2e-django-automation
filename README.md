@@ -3,9 +3,9 @@ A Django-based end-to-end web automation project that uses Playwright to interac
 
 # Project Structure
 ```bash
-airbnb_automation/                 # Project folder
+airbnb-e2e-django-automation/      # Root Directory
 ├── manage.py
-├── airbnb_automation/
+├── core/                          # Project Folder
 │   ├── settings.py
 │   └── urls.py
 ├── tracker/                       # App folder
@@ -38,7 +38,7 @@ git clone https://github.com/emon51/airbnb-e2e-django-automation.git
 ```
 ### 2. Change directory
 ```bash
-cd airbnb_automation
+cd airbnb-e2e-django-automation
 ```
 
 ### 3. Create and activate virtual environment
