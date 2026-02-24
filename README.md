@@ -77,12 +77,12 @@ DJANGO_ALLOW_ASYNC_UNSAFE=true
 python manage.py run_automation
 ```
 
-### 9. Run the server
+### 10. Run the server
 ```bash
 python manage.py runserver
 ```
 
-### 10. Visit the admin page
+### 11. Visit the admin page
 ```bash
 http://127.0.0.1:8000/admin
 ```
