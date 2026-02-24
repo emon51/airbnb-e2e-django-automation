@@ -65,13 +65,19 @@ python manage.py migrate
 ```bash
 python manage.py createsuperuser
 ```
-
-### 8. Run the server
+### 8. Create a **.env** file in the root directory and paste the bellow code inside it
+```bash
+SECRET_KEY=your-django-secret-key-here
+DEBUG=True
+AIRBNB_URL=https://www.airbnb.com/
+DJANGO_ALLOW_ASYNC_UNSAFE=true
+```
+### 9. Run the server
 ```bash
 python manage.py runserver
 ```
 
-### 9. Visit the admin page
+### 10. Visit the admin page
 ```bash
 http://127.0.0.1:8000/admin
 ```
